@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <div class="container">
+       <div class="hours show">
+         00:
+       </div>
+        <div class="minutes show">
+            00
+        </div>
+        <div class="seconds show">
+
+        </div>
+    </div>
+    <button id="stop-btn" onclick="stopTimer()">STOP</button>
+    
+   
+    <div class="clock-container">
+        <div class="clock">
+
+        </div>
+        <p>Current Time</p> 
+    </div>
+    <script>
+
+        let x = -1;
+        let min = 0;
+        let hour = 0;
+        let seconds = document.querySelector('.seconds');
+        let minutes = document.querySelector('.minutes');
+        let hours = document.querySelector('.hours');
+
+        let clock = document.querySelector('.clock');
+        myinterval = setInterval(() => {
+            if(x==59){
+                x=-1;
+                showMinutes();
+            }
+            x = x+1;
+            if(x<10){
+                seconds.innerHTML =":" + "0"+ x;
+            }
+            else{
+                seconds.innerHTML =":" + x;
+            }
+           
+        }, 1000);
+
+        function stopTimer(){
+            clearInterval(myinterval);
+        }
+
+        function showMinutes(){
+            
+            if(min == 59){
+                min = 0;
+                showHours();
+            }
+            min = min+1;
+            if(min<10){
+                minutes.innerHTML = "0" + min;
+            }
+            else{
+                minutes.innerHTML =  min;
+            }
+           
+        }
+
+        function showHours(){
+            hour = hour + 1;
+            if(hour<10){
+                hours.innerHTML = "0" + hour + ":";
+            }
+            else{
+                hours.innerHTML = hour + ":";
+            }
+        }
+
+        setInterval(()=>{
+            clock.innerHTML = Date().slice(16, 24);
+        }, 1000);
+       
+    </script>
+</body>
+</html>

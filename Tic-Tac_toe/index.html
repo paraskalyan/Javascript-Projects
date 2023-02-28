@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TIC TAC TOE GAME</h1>
+    <div class="container">
+       
+        <div class="grid">
+            <button class="box" id="r1c1" onclick="putValue(this.id)"></button>
+            <button class="box" id="r1c2" onclick="putValue(this.id)"></button>
+            <button class="box" id="r1c3" onclick="putValue(this.id)"></button>
+
+            <button class="box" id="r2c1" onclick="putValue(this.id)"></button>
+            <button class="box" id="r2c2" onclick="putValue(this.id)"></button>
+            <button class="box" id="r2c3" onclick="putValue(this.id)"></button>
+
+            <button class="box" id="r3c1" onclick="putValue(this.id)"></button>
+            <button class="box" id="r3c2" onclick="putValue(this.id)"></button>
+            <button class="box" id="r3c3" onclick="putValue(this.id)"></button>
+        </div>
+        <button id="reset" onclick="resetBox()">RESET</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

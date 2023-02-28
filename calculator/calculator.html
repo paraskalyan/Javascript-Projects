@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="textarea">
+            <textarea id="text-area"></textarea>
+        </div>
+        <div class="op-operator">
+            <button class="box operator" onclick="operatorShow(this.id)" id="plus">+</button>
+            <button class="box operator" onclick="operatorShow(this.id)" id="minus">-</button>
+            <button class="box operator" onclick="operatorShow(this.id)" id="mul">*</button>
+            <button class="box operator" onclick="operatorShow(this.id)" id="divide">/</button>
+
+
+            <button class="box" id="seven" onclick="operandShow(this.id)">7</button>
+            <button class="box" id="eight" onclick="operandShow(this.id)">8</button>
+            <button class="box" id="nine" onclick="operandShow(this.id)">9</button>
+            <button class="box" id="four" onclick="operandShow(this.id)">4</button>
+            <button class="box" id="five" onclick="operandShow(this.id)">5</button>
+            <button class="box" id="six" onclick="operandShow(this.id)">6</button>
+            <button class="box" id="one" onclick="operandShow(this.id)">1</button>
+            <button class="box" id="two" onclick="operandShow(this.id)">2</button>
+            <button class="box" id="three" onclick="operandShow(this.id)">3</button>
+            <button class="box" id="zero" onclick="operandShow(this.id)">0</button>
+
+
+            <button class="box" id="dot" onclick="dotShow()">.</button>
+            <button class="box" id="clear" onclick="clearButton()">C</button>
+            <button class="box" id="equal" onclick="evaluateExp()">=</button>
+
+            <script src="script.js"></script>
+
+        </div>
+</body>
+
+</html>
